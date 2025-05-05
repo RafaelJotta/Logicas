@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <ul>
+      <li><button id="home">Main</button></li>
+      <li><button onclick="mostrarExercicio('verificador')">Exercício 1</button></li>        
+      <li><button onclick="mostrarExercicio('tabuadaForm')">exercicio 2</button></li>
+      <li><button onclick="mostrarExercicio('imc')">exercicio 3</button></li>
+      <li><button onclick="mostrarExercicio('mediaNotas')">exercicio 4</button></li>
+      <li><button onclick="mostrarExercicio('calculadoraFlex')">exercicio 5</button></li>
+      <li><button onclick="mostrarExercicio('jogoDoDado')">exercicio 6</button></li>
+      <li><button onclick="mostrarExercicio('cadastroSimples')">exercicio 7</button></li>
+      <li><button onclick="mostrarExercicio('analiseVetores')">exercicio 8</button></li>
+      <li><button onclick="mostrarExercicio('cadastroPessoas')">exercicio 9</button></li>
+      <li><button onclick="mostrarExercicio('fibonacci')">exercicio 10</button></li>
+      <li><button onclick="mostrarExercicio('numero-primo')">exercicio 11</button></li>
+      <li><button onclick="mostrarExercicio('mes-numero')">exercicio 12</button></li>
+      <li><button onclick="mostrarExercicio('data-extenso')">exercicio 13</button></li>
+      <li><button onclick="mostrarExercicio('contador-cliques')">exercicio 14</button></li>
+      <li><button onclick="mostrarExercicio('todo-list')">exercicio 15</button></li>
+    </ul>
+  </aside>
+
+ <main> 
+  <section class="container" id="imc" style="display: none;">
+    <h1>Calcule seu IMC</h1>
+
+    <form action="" id="form" method="post">
+      <label for="peso">Peso: </label>
+      <input type="text" id="peso">
+
+      <label for="altura">Altura: </label>
+      <input type="altura" id="altura" name="altura">
+
+      <button>Calcular</button>
+    </form>
+
+    <div id="resultado-imc"></div>
+  </section>
+
+  <section class="container" id="verificador" style="display: none;">
+    <h1>Verificador de numérico</h1>
+
+    <form action="" id="numerico" method="post">
+      <label for="entrada">Entrada: </label>
+      <input type="text" id="entrada">
+
+      <button>Verificar</button>
+    </form>
+
+    <div id="resultado-verificador"></div>
+  </section>
+
+  <section class="container" id="tabuadaForm" style="display: none;">
+    <h1>Tabuada</h1>
+
+    <form action="" id="tabuada" method="post">
+      <label for="entradaTabuada">Entrada: </label>
+      <input type="text" id="entradaTabuada">
+
+      <button>Verificar</button>
+    </form>
+
+    <div id="resultado-tabuada"></div>
+  </section>
+
+  <section class="container" id="mediaNotas" style="display: none;">
+    <h1>Media da nota do aluno</h1>
+
+    <form action="" id="mediaAluno" method="post">
+      <label for="provaUm">Prova 1: </label>
+      <input type="text" id="provaUm" name="provaUm">
+
+      <label for="provaDois">Prova 2: </label>
+      <input type="text" id="provaDois" name="provaDois">
+
+      <label for="provaTres">Prova 3: </label>
+      <input type="text" id="provaTres" name="provaTres">
+
+      <button>Calcular</button>
+    </form>
+
+    <div id="resultado-aluno"></div>
+
+  </section>
+
+  <section class="container" id="calculadoraFlex" style="display: none;">
+    <h1>Combustivel mais vantajoso</h1>
+
+    <div class="imagem-combustivel">
+      <img id="imgCombustivel" src="assets/img/neutro.png" alt="Combustivel Recomentado">
+    </div>
+
+    <form action="" id="fuelForm" method="post">
+      <input type="text" id="precoGasolina" name="precoGasolina" placeholder="Gasolina">
+
+      <input type="text" id="precoAlcool" name="precoAlcool" placeholder="Alcool">
+
+      <button>Vantagem</button>
+      <button type="button" id="btnLimpar">Limpar</button>
+    </form>
+
+  </section>
+
+
+  
+  <section class="container" id="jogoDoDado" style="display: none;">
+    <h1>Jogo do Dados</h1>
+
+    <div class="imagem-dado">
+      <img id="imgDado" src="assets/img/face1.png" alt="">
+    </div>
+
+    <form action="" id="formDado" method="post">
+
+      <button>Sortear</button>
+    </form>
+  </section>
+
+  
+  <section class="container" id="cadastroSimples" style="display: none;">
+    <h1>Cadastro Simples</h1>
+
+    <form action="" id="cadastroSimplesPessoa" method="post">
+      <label for="nomeCadastro">nome: </label>
+      <input type="text" id="nomeCadastro" name="nomeCadastro">
+
+      <label for="emailCadastro">Email: </label>
+      <input type="email" id="emailCadastro" name="emailCadastro">
+
+      <label for="cpfCadastro">CPF: </label>
+      <input type="text" id="cpfCadastro" name="cpfCadastro">
+
+      <label for="idadeCadastro">idade: </label>
+      <input type="number" id="idadeCadastro" name="idadeCadastro">
+
+      <button>Cadastrar</button>
+    </form>
+
+    <div id="resultado-cadastro"></div>
+
+  </section>
+
+  <section class="container" id="analiseVetores" style="display: none;">
+    <h1>Análise de Vetores</h1>
+  
+    <div id="numerosEnviados">
+      <h3>Números digitados:</h3>
+      <ul id="listaNumeros"></ul>
+    </div>
+  
+    <form id="formAnalise">
+      <label for="numeroEntrada">Digite um número:</label>
+      <input type="text" id="numeroEntrada" name="numeroEntrada" required>
+
+      <button type="submit">Enviar número</button>
+      <button type="button" id="reiniciarBtn">Reiniciar análise</button>
+
+    </form>
+  
+    <div id="resultado-analise"></div>
+  </section>
+
+<div class="container" id="cadastroPessoas" style="display: none;">
+  <h2>Cadastro de Pessoas</h2>
+  <form id="formCadastroPessoas">
+    <label for="nomePessoa">Nome:</label>
+    <input type="text" id="nomePessoa" required>
+
+    <label for="cidadePessoa">Cidade:</label>
+    <input type="text" id="cidadePessoa" required>
+
+    <label for="idadePessoa">Idade:</label>
+    <input type="number" id="idadePessoa" required>
+
+    <label for="sexoPessoa">Sexo:</label>
+    <select id="sexoPessoa" required>
+      <option value="">Selecione</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+    </select>
+
+    <button type="submit">Cadastrar</button>
+    <button type="button" id="reiniciarCadastro">Reiniciar</button>
+  </form>
+
+  <div id="resultado-cadastro-pessoas"></div>
+</div>
+
+<section class="container" id="fibonacci" style="display: none;">
+  <h2>10. Sequência de Fibonacci</h2>
+  <button id="btnFibonacci">Gerar Fibonacci</button>
+  <ul id="resultado-fibonacci"></ul>
+</section>
+
+<section class="container" id="numero-primo" style="display: none;">
+  <h2>11. Número Primo</h2>
+  <form id="formPrimo">
+    <input type="number" id="inputPrimo" placeholder="Digite um número" required>
+    <button type="submit">Verificar</button>
+  </form>
+  <p id="resultado-primo"></p>
+</section>
+
+<section class="container" id="mes-numero" style="display: none;">
+  <h2>12. Mês por Número</h2>
+  <form id="formMes">
+    <input type="number" id="inputMes" placeholder="Digite um número de 1 a 12" required>
+    <button type="submit">Verificar Mês</button>
+  </form>
+  <p id="resultado-mes"></p>
+</section>
+
+<section class="container" id="data-extenso" style="display: none;">
+  <h2>13. Data por Extenso</h2>
+  <form id="formData">
+    <input type="text" id="inputData" placeholder="dd/mm/aaaa" required>
+    <button type="submit">Converter</button>
+  </form>
+  <p id="resultado-data"></p>
+</section>
+
+<section class="container" id="contador-cliques" style="display: none;">
+  <h2>14. Contador de Cliques</h2>
+  <p>Contador: <span id="contador">0</span></p>
+  <button id="btnClique">Clique aqui</button>
+  <button id="btnResetar">Resetar</button>
+</section>
+
+<section class="container" id="todo-list" style="display: none;">
+  <h2>15. Lista de Tarefas</h2>
+  <form id="formTarefa">
+    <input type="text" id="inputTarefa" placeholder="Digite uma tarefa" required>
+    <button type="submit">Adicionar Tarefa</button>
+  </form>
+  <ul id="lista-tarefas"></ul>
+</section>
+
+
+</main>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

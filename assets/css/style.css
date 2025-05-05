@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --background-light: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--primary-color);
+  font-size: 1.2em;
+  display: flex;
+  min-height: 100vh;
+}
+
+
+aside {
+  width: 220px;
+  background-color: var(--primary-color-darker);
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+aside ul li button:hover {
+  background-color: #ddd;
+}
+
+
+main {
+  flex: 1;
+  background: var(--background-light);
+  padding: 40px;
+}
+
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color-darker);
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 20px;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.paragrafo-resultado, .bad {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.paragrafo-resultado {
+  background-color: #6bebaf;
+  color: black;
+}
+
+.bad {
+  background-color: rgb(224, 90, 90);
+  color: white;
+}
+
+
+.container button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+
