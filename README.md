@@ -1,1 +1,1 @@
-# Logicas algumas logicas de JS. 
+# Algumas logicas de JS. 
